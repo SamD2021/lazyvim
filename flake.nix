@@ -110,6 +110,7 @@
               stylua
               black
               rustfmt
+              nodejs
             ];
           };
 
