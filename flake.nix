@@ -166,6 +166,7 @@
               nvim-treesitter.withAllGrammars
               direnv-vim
               mini-base16
+              blink-cmp
               # This is for if you only want some of the grammars
               # (nvim-treesitter.withPlugins (
               #   plugins: with plugins; [
