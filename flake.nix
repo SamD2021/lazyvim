@@ -63,6 +63,21 @@
           # Once we add this overlay to our nixpkgs, we are able to
           # use `pkgs.neovimPlugins`, which is a set of our plugins.
           (utils.standardPluginOverlay inputs)
+
+          (final: prev: {
+            vimPlugins = prev.vimPlugins // {
+              conform-nvim = prev.vimUtils.buildVimPlugin {
+                pname = "conform-nvim";
+                version = "2025-04-20";
+                src = prev.fetchFromGitHub {
+                  owner = "stevearc";
+                  repo = "conform.nvim";
+                  rev = "372fc521f8421b7830ea6db4d6ea3bae1c77548c";
+                  sha256 = "sha256-J/GKqn2VHv/ydaFXWCFduV2B7iwZzHtUvFArszxf2Cw=";
+                };
+              };
+            };
+          })
           # add any other flake overlays here.
 
           # when other people mess up their overlays by wrapping them with system,
