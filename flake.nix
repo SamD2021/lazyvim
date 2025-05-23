@@ -126,6 +126,7 @@
               black
               rustfmt
               nodejs
+              shfmt
             ];
           };
 
@@ -134,7 +135,7 @@
           # but you have the option, and that is demonstrated here.
           startupPlugins = with pkgs.vimPlugins; {
             general = [
-              # LazyVim
+              nvim-osc52
               lazy-nvim
               LazyVim
               bufferline-nvim
